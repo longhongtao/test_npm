@@ -1,0 +1,43 @@
+/*
+颜色
+*/
+@mixin color($color: #fff, $background, $border: $background, $transition: 0.3s) {
+    color: $color;
+    background: $background;
+    border-color: $border;
+    transition: $transition;
+}
+
+@mixin hover($color: #fff, $background, $border: $background) {
+
+    &:hover {
+        color: $color;
+        background: $background;
+        border-color: $border;
+    }
+}
+
+@mixin disabled($color: #fff, $background, $border: $background) {
+    &:disabled {
+        cursor: not-allowed;
+        color: $color;
+        background: $background;
+        border-color: $border;
+
+        &:active {
+            color: $color;
+            background: $background;
+            border-color: $border;
+        }
+    }
+}
+
+@mixin active($color: #fff, $background, $border: $background, $outline: none) {
+
+    &:active {
+        color: $color;
+        background: $background;
+        border-color: $border;
+        outline: $outline;
+    }
+}
